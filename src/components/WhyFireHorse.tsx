@@ -95,11 +95,11 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
             </div>
 
             {/* 5 Pillars: Distinct Card Views */}
-            <div className="space-y-2.5">
+            <div className="space-y-3">
               {pillars.map((pillar, idx) => (
                 <div
                   key={pillar.title}
-                  className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#141820] to-[#0f1217] border border-slate-800/90 hover:border-orange-500/50 hover:from-[#181d28] hover:to-[#12161f] transition-all duration-200 flex items-start gap-3.5 shadow-md shadow-black/40 group"
+                  className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#141820] to-[#0f1217] border border-slate-800/90 hover:border-orange-500/50 hover:from-[#181d28] hover:to-[#12161f] transition-all duration-200 flex items-start gap-4 shadow-md shadow-black/40 group"
                 >
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="font-display font-extrabold text-xs text-amber-400">
@@ -107,10 +107,10 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
                     </span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-display font-bold text-white uppercase tracking-wide group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-base font-display font-bold text-white uppercase tracking-wide group-hover:text-amber-300 transition-colors leading-tight">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-300 font-light mt-0.5 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-300 font-light mt-1 leading-relaxed">
                       {pillar.desc}
                     </p>
                   </div>
