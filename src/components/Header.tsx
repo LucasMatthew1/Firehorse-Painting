@@ -29,17 +29,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0a0c0f]/95 backdrop-blur-md shadow-2xl shadow-black/90 border-b border-orange-500/25 py-2 sm:py-2.5"
-          : "bg-[#0a0c0f]/90 backdrop-blur-sm border-b border-white/5 py-3 sm:py-3.5"
+          ? "bg-[#0a0c0f]/95 backdrop-blur-md shadow-2xl shadow-black/90 border-b border-orange-500/25 py-1.5 sm:py-2"
+          : "bg-[#0a0c0f]/90 backdrop-blur-sm border-b border-white/5 py-2 sm:py-2.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Prominent Authentic FireHorse Logo */}
+        {/* Sleek Compact FireHorse Logo */}
         <a
           href="#hero"
-          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl group py-0.5"
+          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg group"
         >
-          <FireHorseLogo size="lg" />
+          <FireHorseLogo size="sm" />
         </a>
 
         {/* Clean Desktop Navigation */}
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden fixed inset-x-0 top-[76px] z-30 bg-[#0a0c0f] border-b border-orange-500/30 shadow-2xl overflow-hidden"
+            className="lg:hidden fixed inset-x-0 top-[60px] sm:top-[64px] z-30 bg-[#0a0c0f] border-b border-orange-500/30 shadow-2xl overflow-hidden"
           >
             <div className="px-6 py-6 space-y-4 max-w-lg mx-auto">
               <div className="flex flex-col space-y-2 pb-2">

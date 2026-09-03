@@ -136,9 +136,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal }) => {
               <div className="relative z-10 flex flex-col items-center justify-center mb-3">
                 <div className="relative group">
                   <img
-                    src="/assets/pasted-image-2026-09-03T00-51-46-555Z.png"
+                    src="/assets/pasted-image-2026-09-03T01-29-47-197Z.png"
                     alt="FireHorse Painting"
-                    className="h-32 sm:h-36 md:h-40 w-auto object-contain mx-auto filter drop-shadow-[0_4px_24px_rgba(249,115,22,0.35)] drop-shadow-[0_8px_32px_rgba(0,0,0,0.8)] transition-transform duration-300 group-hover:scale-105"
+                    className="h-32 sm:h-36 md:h-40 w-auto object-contain mx-auto filter drop-shadow-[0_4px_24px_rgba(249,115,22,0.4)] drop-shadow-[0_8px_32px_rgba(0,0,0,0.85)] transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
