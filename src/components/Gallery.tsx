@@ -99,31 +99,31 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
   };
 
   return (
-    <section id="gallery" className="py-20 sm:py-28 bg-[#0a0c10] relative overflow-hidden border-t border-slate-800/80">
+    <section id="gallery" className="py-12 sm:py-16 bg-[#0a0c10] relative overflow-hidden border-t border-slate-800/80">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/4 right-1/4 w-[45rem] h-[30rem] bg-orange-600/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-[45rem] h-[25rem] bg-orange-600/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2.5">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-500/15 to-amber-500/10 border border-orange-500/30 text-amber-400 text-xs font-display font-bold uppercase tracking-wider">
             <Sparkle weight="fill" className="w-3.5 h-3.5 text-orange-400" />
             <span>Project Gallery</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-5.5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight">
+          <h2 className="text-3.5xl sm:text-4.5xl md:text-5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight">
             SEE THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-orange-500">DIFFERENCE</span>
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
             Before-and-after transformations and completed residential and property painting projects.
           </p>
         </div>
 
         {/* Featured Interactive Before & After Slider Card */}
-        <div className="mb-14 rounded-3xl bg-gradient-to-b from-[#141822] to-[#0d1017] border border-orange-500/30 p-4 sm:p-7 shadow-2xl shadow-black/80">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3.5 border-b border-slate-800/80">
-            <h3 className="text-lg sm:text-xl font-display font-extrabold text-white uppercase tracking-wide">
+        <div className="mb-8 rounded-3xl bg-gradient-to-b from-[#141822] to-[#0d1017] border border-orange-500/30 p-4 sm:p-6 shadow-2xl shadow-black/80">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-800/80">
+            <h3 className="text-base sm:text-lg font-display font-extrabold text-white uppercase tracking-wide">
               Cabinet Transformation (Before / After)
             </h3>
             <span className="text-xs text-amber-400 font-medium flex items-center gap-1.5">
@@ -147,7 +147,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                 setSliderPosition((prev) => Math.min(100, prev + 5));
               }
             }}
-            className="relative h-64 sm:h-96 md:h-[460px] w-full rounded-2xl overflow-hidden cursor-ew-resize select-none border border-slate-700/80 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="relative h-60 sm:h-80 md:h-[400px] w-full rounded-2xl overflow-hidden cursor-ew-resize select-none border border-slate-700/80 focus:outline-none focus:ring-2 focus:ring-orange-500"
             onMouseMove={handleSliderMove}
             onTouchMove={handleSliderMove}
           >
@@ -171,13 +171,13 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                 style={{ width: "100%", minWidth: "100%" }}
               />
               <div className="absolute inset-0 bg-black/20 pointer-events-none" />
-              <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-black/85 text-white font-display text-xs font-bold uppercase tracking-wider border border-slate-700">
+              <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/85 text-white font-display text-xs font-bold uppercase tracking-wider border border-slate-700">
                 Before
               </div>
             </div>
 
             {/* Right Badge "FireHorse Finish" */}
-            <div className="absolute top-4 right-4 z-10 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#c2410c] to-[#9a3412] text-white font-display text-xs font-bold uppercase tracking-wider border border-orange-400/50 shadow-lg">
+            <div className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full btn-flame text-white font-display text-xs font-bold uppercase tracking-wider shadow-lg">
               FireHorse Finish
             </div>
 
@@ -186,7 +186,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
               className="absolute inset-y-0 w-0.5 bg-gradient-to-b from-amber-400 via-orange-500 to-amber-400 shadow-[0_0_12px_rgba(249,115,22,0.9)]"
               style={{ left: `${sliderPosition}%` }}
             >
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-slate-950 border-2 border-orange-400 flex items-center justify-center text-amber-400 shadow-2xl font-bold text-xs">
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-950 border-2 border-orange-400 flex items-center justify-center text-amber-400 shadow-2xl font-bold text-xs">
                 ↔
               </div>
             </div>
@@ -194,14 +194,14 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 pb-2 mb-10 w-full">
+        <div className="flex flex-wrap items-center justify-center gap-2 pb-2 mb-6 w-full">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-xs font-display font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === cat.id
-                  ? "bg-gradient-to-r from-[#c2410c] to-[#9a3412] text-white shadow-xl shadow-orange-950/60 border border-orange-400/50"
+                  ? "btn-flame text-white shadow-lg"
                   : "bg-[#141820] text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800"
               }`}
             >
@@ -211,7 +211,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => (
               <motion.div
@@ -221,11 +221,11 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="group relative rounded-3xl bg-gradient-to-b from-[#141822] to-[#0d1017] border border-slate-800/90 hover:border-orange-500/50 overflow-hidden shadow-2xl shadow-black/60 hover:shadow-orange-950/40 flex flex-col transition-all duration-300 hover:-translate-y-1"
+                className="group relative rounded-3xl bg-gradient-to-b from-[#141822] to-[#0d1017] border border-slate-800/90 hover:border-orange-500/50 overflow-hidden shadow-xl shadow-black/60 hover:shadow-orange-950/40 flex flex-col transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Image Box */}
                 <div
-                  className="relative h-64 w-full overflow-hidden bg-slate-900 cursor-pointer"
+                  className="relative h-56 w-full overflow-hidden bg-slate-900 cursor-pointer"
                   onClick={() => setSelectedImage(item)}
                 >
                   <img
@@ -235,23 +235,23 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#141822] via-transparent to-transparent" />
                   
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-orange-500/30 text-amber-400 font-display text-xs font-bold uppercase tracking-wider">
+                  <span className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-orange-500/30 text-amber-400 font-display text-xs font-bold uppercase tracking-wider">
                     {item.categoryLabel}
                   </span>
                 </div>
 
                 {/* Card Information */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                   <div>
-                    <h3 className="text-xl font-display font-extrabold text-white uppercase group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-lg font-display font-extrabold text-white uppercase group-hover:text-amber-300 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-slate-300 font-light mt-1.5 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-300 font-light mt-1 leading-relaxed">
                       {item.details}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                  <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                     <span className="text-xs text-slate-400 uppercase font-medium">
                       {item.scope}
                     </span>
@@ -290,15 +290,15 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                     className="w-full h-full object-contain mx-auto"
                   />
                 </div>
-                <div className="p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-800">
+                <div className="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-800">
                   <div>
                     <span className="text-xs font-display uppercase tracking-wider text-orange-400 font-bold">
                       {selectedImage.categoryLabel}
                     </span>
-                    <h4 className="text-xl sm:text-2xl font-display font-extrabold text-white uppercase">
+                    <h4 className="text-lg sm:text-xl font-display font-extrabold text-white uppercase">
                       {selectedImage.title}
                     </h4>
-                    <p className="text-sm text-slate-300 mt-1 font-light">
+                    <p className="text-xs sm:text-sm text-slate-300 mt-0.5 font-light">
                       {selectedImage.details}
                     </p>
                   </div>
@@ -308,7 +308,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
                       setSelectedImage(null);
                       onOpenEstimateModal(cat);
                     }}
-                    className="px-7 py-3 rounded-xl bg-gradient-to-r from-[#c2410c] to-[#9a3412] hover:from-orange-500 hover:to-amber-500 text-white font-display text-sm font-bold uppercase tracking-wider whitespace-nowrap shadow-lg border border-orange-400/40 cursor-pointer"
+                    className="btn-flame px-6 py-2.5 rounded-xl text-white font-display text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg cursor-pointer"
                   >
                     Request Free Estimate
                   </button>
