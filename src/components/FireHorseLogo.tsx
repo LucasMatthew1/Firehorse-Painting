@@ -12,12 +12,12 @@ export const FireHorseLogo: React.FC<FireHorseLogoProps> = ({
   size = "md",
 }) => {
   const sizeMap = {
-    xs: "h-9 sm:h-10",
-    sm: "h-11 sm:h-12",
-    md: "h-14 sm:h-16",
-    lg: "h-20 sm:h-24 md:h-28",
-    xl: "h-28 sm:h-32",
-    hero: "h-32 sm:h-38 md:h-44",
+    xs: "h-12 sm:h-13",
+    sm: "h-16 sm:h-18",
+    md: "h-20 sm:h-24",
+    lg: "h-32 sm:h-36 md:h-40",
+    xl: "h-40 sm:h-44",
+    hero: "h-48 sm:h-56 md:h-64",
     custom: "",
   };
 

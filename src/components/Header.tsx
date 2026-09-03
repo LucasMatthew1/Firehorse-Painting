@@ -43,8 +43,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
             size="custom"
             imgClassName={`transition-all duration-300 ${
               isScrolled
-                ? "h-10 sm:h-11 md:h-12"
-                : "h-14 sm:h-16 md:h-18"
+                ? "h-16 sm:h-18 md:h-20"
+                : "h-24 sm:h-28 md:h-32"
             }`}
           />
         </a>

@@ -64,16 +64,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal }) => {
             </motion.div>
 
             {/* Headline */}
-            <motion.div variants={itemVariants} className="space-y-2.5">
-              <h1 className="text-4xl sm:text-5.5xl md:text-6xl lg:text-[4.5rem] font-display font-extrabold uppercase tracking-tight text-white leading-[0.96]">
+            <motion.div variants={itemVariants} className="space-y-5">
+              <h1 className="text-4xl sm:text-5.5xl md:text-6xl lg:text-[4.5rem] font-display font-extrabold uppercase tracking-tight text-white leading-[1.1]">
                 QUALITY PAINTING.{" "}
                 <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-orange-500">
                   BUILT TO LAST.
-                  <span className="absolute -bottom-1 left-0 right-0 h-2 sm:h-2.5 bg-gradient-to-r from-orange-600/70 to-amber-500/70 -rotate-1 rounded-sm -z-10" />
+                  <span className="absolute -bottom-2 left-0 right-0 h-2 sm:h-2.5 bg-gradient-to-r from-orange-600/70 to-amber-500/70 -rotate-1 rounded-sm -z-10" />
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-200 font-normal max-w-xl leading-relaxed pt-1">
+              <p className="text-base sm:text-lg text-slate-200 font-normal max-w-xl leading-relaxed">
                 Precision interior and exterior painting for homes, cabinets, decks, outbuildings, and barns. Clean lines and durable finishes.
               </p>
             </motion.div>
@@ -138,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal }) => {
                   <img
                     src="/assets/pasted-image-2026-09-03T01-29-47-197Z.png"
                     alt="FireHorse Painting"
-                    className="h-28 sm:h-34 md:h-38 w-auto object-contain mx-auto filter drop-shadow-[0_4px_20px_rgba(249,115,22,0.4)] drop-shadow-[0_8px_30px_rgba(0,0,0,0.85)] transition-transform duration-300 group-hover:scale-105"
+                    className="h-52 sm:h-56 md:h-60 w-auto object-contain mx-auto filter drop-shadow-[0_4px_24px_rgba(249,115,22,0.4)] drop-shadow-[0_8px_32px_rgba(0,0,0,0.85)] transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
