@@ -105,17 +105,17 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2.5">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 flex flex-col items-center gap-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-500/15 to-amber-500/10 border border-orange-500/30 text-amber-400 text-xs font-display font-bold uppercase tracking-wider">
             <Sparkle weight="fill" className="w-3.5 h-3.5 text-orange-400" />
             <span>Project Gallery</span>
           </div>
 
-          <h2 className="text-3.5xl sm:text-4.5xl md:text-5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight">
-            SEE THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-orange-500">DIFFERENCE</span>
+          <h2 className="text-3.5xl sm:text-4.5xl md:text-5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight block">
+            SEE THE <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-orange-500">DIFFERENCE</span>
           </h2>
 
-          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed block">
             Before-and-after transformations and completed residential and property painting projects.
           </p>
         </div>

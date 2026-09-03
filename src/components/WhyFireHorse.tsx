@@ -106,7 +106,7 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
                       0{idx + 1}
                     </span>
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-base font-display font-bold text-white uppercase tracking-wide group-hover:text-amber-300 transition-colors">
                       {pillar.title}
                     </h3>
