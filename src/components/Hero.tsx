@@ -127,65 +127,65 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal }) => {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-5 flex justify-center lg:justify-end w-full"
           >
-            <div className="w-full max-w-[420px] rounded-3xl bg-gradient-to-b from-[#141822]/95 via-[#0f121a]/95 to-[#0a0c10]/95 border border-orange-500/30 shadow-[0_0_45px_-12px_rgba(234,88,12,0.35)] shadow-black/90 p-6 sm:p-7 text-center backdrop-blur-xl relative overflow-hidden">
+            <div className="w-full max-w-[370px] rounded-2xl bg-gradient-to-b from-[#141822]/95 via-[#0f121a]/95 to-[#0a0c10]/95 border border-orange-500/30 shadow-[0_0_40px_-10px_rgba(234,88,12,0.3)] shadow-black/90 p-5 sm:p-6 text-center backdrop-blur-xl relative overflow-hidden">
               
               {/* Radial Glow inside card */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-44 h-44 bg-gradient-to-b from-orange-500/20 to-transparent rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-b from-orange-500/15 to-transparent rounded-full blur-2xl pointer-events-none" />
 
               {/* Official Outlined FireHorse Logo */}
-              <div className="relative z-10 flex flex-col items-center justify-center mb-2">
+              <div className="relative z-10 flex flex-col items-center justify-center mb-1.5">
                 <div className="relative group">
                   <img
                     src="/assets/pasted-image-2026-09-03T01-29-47-197Z.png"
                     alt="FireHorse Painting"
-                    className="h-52 sm:h-56 md:h-60 w-auto object-contain mx-auto filter drop-shadow-[0_4px_24px_rgba(249,115,22,0.4)] drop-shadow-[0_8px_32px_rgba(0,0,0,0.85)] transition-transform duration-300 group-hover:scale-105"
+                    className="h-32 sm:h-36 md:h-40 w-auto object-contain mx-auto filter drop-shadow-[0_4px_16px_rgba(249,115,22,0.35)] drop-shadow-[0_8px_24px_rgba(0,0,0,0.8)] transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
-                <p className="text-slate-300 text-xs sm:text-[13px] pt-2.5 max-w-xs mx-auto leading-relaxed font-normal">
+                <p className="text-slate-300 text-xs pt-2 max-w-[260px] mx-auto leading-tight font-normal opacity-80">
                   Premium Paint Applications • Clean Cut Lines • Durable Protection
                 </p>
               </div>
 
               {/* Divider */}
-              <div className="relative z-10 border-t border-slate-800/90 my-4" />
+              <div className="relative z-10 border-t border-slate-800/70 my-3" />
 
               {/* Inset Box: FAST LOCAL RESPONSE & 502-296-8106 */}
-              <div className="relative z-10 bg-gradient-to-br from-[#0c0e14] to-[#07090d] rounded-2xl p-4 border border-slate-800/90 shadow-inner text-left space-y-1.5 mb-4">
+              <div className="relative z-10 bg-gradient-to-br from-[#0c0e14] to-[#07090d] rounded-xl p-3.5 border border-slate-800/90 shadow-inner text-left space-y-1 mb-3.5">
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-display font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
                     FAST LOCAL RESPONSE
                   </span>
-                  <span className="text-slate-300 font-medium text-xs">
+                  <span className="text-slate-400 font-medium">
                     Direct with Crew
                   </span>
                 </div>
 
                 <a
                   href="tel:5022968106"
-                  className="block text-2.5xl sm:text-3xl font-display font-extrabold text-white tracking-wide hover:text-amber-400 transition-colors"
+                  className="block text-2xl sm:text-2.5xl font-display font-extrabold text-white tracking-wide hover:text-amber-400 transition-colors leading-none"
                 >
                   502-296-8106
                 </a>
 
-                <p className="text-xs text-slate-400 leading-relaxed font-light">
+                <p className="text-xs text-slate-400 leading-tight font-light">
                   Free estimates for interior, exterior, decks, and cabinets.
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="relative z-10 space-y-2.5">
+              <div className="relative z-10 space-y-2">
                 <button
                   onClick={onOpenEstimateModal}
-                  className="btn-flame w-full py-3.5 px-4 rounded-xl text-white font-display text-base font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 active:scale-[0.99]"
+                  className="btn-flame w-full py-2.5 px-4 rounded-xl text-white font-display text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 active:scale-[0.98]"
                 >
-                  <PaintBrush weight="bold" className="w-5 h-5" />
+                  <PaintBrush weight="bold" className="w-4 h-4" />
                   <span>START FREE ESTIMATE</span>
                 </button>
 
                 <a
                   href="sms:5022968106"
-                  className="w-full py-3 px-4 rounded-xl bg-[#141822] hover:bg-[#1d2230] text-slate-200 hover:text-white text-xs font-semibold border border-slate-700/80 hover:border-orange-500/40 flex items-center justify-center transition-all duration-200 block text-center uppercase tracking-wider font-display"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#141822] hover:bg-[#1d2230] text-slate-200 hover:text-white text-xs font-semibold border border-slate-700/80 hover:border-orange-500/40 flex items-center justify-center transition-all duration-200 block text-center uppercase tracking-widest font-display"
                 >
                   Tap to Send a Quick Text
                 </a>
