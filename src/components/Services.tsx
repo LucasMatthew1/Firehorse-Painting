@@ -112,7 +112,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                 custom={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-10%" }}
+                viewport={{ once: true, amount: 0.1 }}
                 variants={cardVariants}
                 className={`group relative rounded-2xl bg-[#13161c] border border-slate-800/90 hover:border-orange-500/60 transition-all duration-300 flex flex-col overflow-hidden shadow-xl shadow-black/40 hover:shadow-orange-950/40 hover:-translate-y-1 ${
                   isLastTwoOnDesktop && index === 3 ? "lg:col-span-1 lg:col-start-1 lg:ml-auto w-full" : ""

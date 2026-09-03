@@ -140,7 +140,20 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenEstimateModal }) => {
 
           {/* Interactive Before & After Canvas */}
           <div
-            className="relative h-64 sm:h-96 md:h-[460px] w-full rounded-xl overflow-hidden cursor-ew-resize select-none border border-slate-700/60"
+            role="slider"
+            tabIndex={0}
+            aria-label="Cabinet Painting Before and After Comparison Slider"
+            aria-valuenow={Math.round(sliderPosition)}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowLeft") {
+                setSliderPosition((prev) => Math.max(0, prev - 5));
+              } else if (e.key === "ArrowRight") {
+                setSliderPosition((prev) => Math.min(100, prev + 5));
+              }
+            }}
+            className="relative h-64 sm:h-96 md:h-[460px] w-full rounded-xl overflow-hidden cursor-ew-resize select-none border border-slate-700/60 focus:outline-none focus:ring-2 focus:ring-orange-500"
             onMouseMove={handleSliderMove}
             onTouchMove={handleSliderMove}
           >

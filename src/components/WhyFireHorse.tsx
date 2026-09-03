@@ -56,7 +56,7 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 relative"
           >
@@ -96,7 +96,7 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-7 space-y-7"
           >
