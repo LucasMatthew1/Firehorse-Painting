@@ -1,5 +1,6 @@
 import React from "react";
 import { FireHorseLogo } from "./FireHorseLogo";
+import { Phone, ArrowUpRight } from "@phosphor-icons/react";
 
 interface FooterProps {
   onOpenEstimateModal: () => void;
@@ -17,16 +18,19 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimateModal }) => {
   ];
 
   return (
-    <footer className="bg-[#090b0e] border-t border-slate-800/80 text-slate-400 relative overflow-hidden pb-20 sm:pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-slate-800/80 items-start">
-          {/* Col 1: Brand & Logo */}
+    <footer className="bg-[#07090c] border-t border-slate-800/80 text-slate-400 relative overflow-hidden pb-20 sm:pb-8">
+      {/* Background Atmosphere */}
+      <div className="absolute top-0 left-1/3 w-[35rem] h-[18rem] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-14 pb-12 border-b border-slate-800/80 items-start">
+          {/* Col 1: Brand & Large Prominent Logo */}
           <div className="lg:col-span-5 space-y-4">
-            <a href="#hero" className="inline-block">
-              <FireHorseLogo size="lg" />
+            <a href="#hero" className="inline-block group">
+              <FireHorseLogo size="xl" />
             </a>
             
-            <p className="text-base text-slate-300 font-display uppercase tracking-wider font-semibold text-orange-400">
+            <p className="text-base text-slate-200 font-display uppercase tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">
               Professional Painting Services
             </p>
 
@@ -37,9 +41,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimateModal }) => {
             <div className="pt-2">
               <a
                 href="tel:5022968106"
-                className="inline-block text-2xl font-display font-bold text-amber-400 hover:text-amber-300 transition-colors"
+                className="inline-flex items-center gap-2 text-2xl font-display font-extrabold text-amber-400 hover:text-amber-300 transition-colors"
               >
-                502-296-8106
+                <Phone weight="fill" className="w-5 h-5" />
+                <span>502-296-8106</span>
               </a>
             </div>
           </div>
@@ -49,14 +54,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimateModal }) => {
             <h4 className="text-sm font-display font-bold uppercase tracking-wider text-white">
               Services
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm">
               {services.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="hover:text-orange-400 transition-colors"
+                    className="hover:text-orange-400 transition-colors flex items-center gap-1.5 group"
                   >
-                    {item.name}
+                    <span>{item.name}</span>
+                    <ArrowUpRight weight="bold" className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-orange-400" />
                   </a>
                 </li>
               ))}
@@ -68,14 +74,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEstimateModal }) => {
             <h4 className="text-sm font-display font-bold uppercase tracking-wider text-white">
               Free Estimate
             </h4>
-            <p className="text-sm text-slate-300 font-light">
+            <p className="text-sm text-slate-300 font-light leading-relaxed">
               Call, text, or submit a request for an upfront estimate on your painting project.
             </p>
 
-            <div className="pt-1">
+            <div className="pt-2">
               <button
                 onClick={onOpenEstimateModal}
-                className="w-full py-3 px-4 rounded-xl bg-[#c2410c] hover:bg-orange-600 text-white font-display text-sm font-bold uppercase tracking-wider transition-all shadow-lg cursor-pointer border border-orange-400/30"
+                className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#c2410c] to-[#9a3412] hover:from-orange-500 hover:to-amber-500 text-white font-display text-sm font-bold uppercase tracking-wider transition-all shadow-lg shadow-orange-950/50 cursor-pointer border border-orange-400/30 text-center"
               >
                 Request Free Estimate
               </button>

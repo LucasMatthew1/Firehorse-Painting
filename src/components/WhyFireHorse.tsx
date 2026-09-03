@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { ArrowRight, Phone, CheckCircle, ShieldCheck } from "@phosphor-icons/react";
 
 interface WhyFireHorseProps {
   onOpenEstimateModal: () => void;
@@ -30,10 +31,15 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
   ];
 
   return (
-    <section id="why-us" className="py-20 sm:py-24 bg-[#0e1015] relative overflow-hidden border-t border-slate-800/80">
+    <section id="why-us" className="py-20 sm:py-28 bg-[#0b0d11] relative overflow-hidden border-t border-slate-800/80">
+      {/* Background Gradient Atmosphere */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-orange-600/10 rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[36rem] h-[36rem] bg-amber-600/10 rounded-full blur-[130px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Visual Photography */}
+          
+          {/* Left Column: Visual Photography with Glow */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -41,19 +47,21 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl shadow-black/80">
+            <div className="relative rounded-3xl overflow-hidden border border-orange-500/30 shadow-2xl shadow-black/90 group">
               <img
                 src="/assets/painter-craft.jpg"
                 alt="FireHorse Painting professional painter applying finish"
-                className="w-full h-[400px] sm:h-[460px] object-cover object-center filter brightness-95 contrast-105"
+                className="w-full h-[420px] sm:h-[480px] object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0e1015] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d11] via-[#0b0d11]/30 to-transparent" />
               
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-800">
-                <span className="text-xs uppercase font-display font-semibold tracking-widest text-amber-400">
-                  FireHorse Standard
-                </span>
-                <p className="text-sm text-slate-200 font-medium pt-1">
+              {/* Bottom Floating Badge Card */}
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-gradient-to-b from-slate-950/90 to-[#0c0e12]/95 backdrop-blur-md border border-orange-500/30 shadow-xl">
+                <div className="flex items-center gap-2 text-amber-400 text-xs uppercase font-display font-bold tracking-widest">
+                  <ShieldCheck weight="fill" className="w-4 h-4 text-orange-500" />
+                  <span>The FireHorse Standard</span>
+                </div>
+                <p className="text-sm sm:text-base text-slate-100 font-semibold pt-1">
                   Built on quality. Finished with pride.
                 </p>
               </div>
@@ -69,13 +77,14 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
             className="lg:col-span-7 space-y-8"
           >
             <div className="space-y-3">
-              <span className="text-xs font-display font-bold uppercase tracking-widest text-amber-400">
-                Why FireHorse Painting
-              </span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-500/15 to-amber-500/10 border border-orange-500/30 text-amber-400 text-xs font-display font-bold uppercase tracking-wider">
+                <CheckCircle weight="fill" className="w-3.5 h-3.5 text-orange-400" />
+                <span>Why FireHorse Painting</span>
+              </div>
 
-              <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight leading-tight uppercase">
+              <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight uppercase">
                 BUILT ON QUALITY.{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-orange-500">
                   FINISHED WITH PRIDE.
                 </span>
               </h2>
@@ -85,21 +94,23 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
               </p>
             </div>
 
-            {/* 5 Pillars: Simple, Sleek, Clean */}
-            <div className="space-y-4">
+            {/* 5 Pillars: Distinct Card Views with Glowing Accent Numbers */}
+            <div className="space-y-3.5">
               {pillars.map((pillar, idx) => (
                 <div
                   key={pillar.title}
-                  className="p-4 rounded-xl bg-[#13161c] border border-slate-800/90 hover:border-orange-500/40 transition-all flex items-start gap-4"
+                  className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#141820] to-[#0f1217] border border-slate-800/90 hover:border-orange-500/50 hover:from-[#181d28] hover:to-[#12161f] transition-all duration-300 flex items-start gap-4 shadow-lg shadow-black/40 group"
                 >
-                  <span className="font-display font-bold text-base text-amber-400 mt-0.5">
-                    0{idx + 1}
-                  </span>
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="font-display font-extrabold text-sm text-amber-400">
+                      0{idx + 1}
+                    </span>
+                  </div>
                   <div>
-                    <h3 className="text-lg font-display font-bold text-white uppercase tracking-wide">
+                    <h3 className="text-lg font-display font-bold text-white uppercase tracking-wide group-hover:text-amber-300 transition-colors">
                       {pillar.title}
                     </h3>
-                    <p className="text-sm text-slate-300 font-light mt-0.5 leading-relaxed">
+                    <p className="text-sm text-slate-300 font-light mt-1 leading-relaxed">
                       {pillar.desc}
                     </p>
                   </div>
@@ -107,20 +118,22 @@ export const WhyFireHorse: React.FC<WhyFireHorseProps> = ({ onOpenEstimateModal 
               ))}
             </div>
 
-            {/* Direct Action */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            {/* Direct Action CTAs */}
+            <div className="pt-3 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenEstimateModal}
-                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#c2410c] to-[#9a3412] hover:from-orange-600 hover:to-amber-600 text-white font-display text-base font-bold tracking-wider uppercase transition-all shadow-lg shadow-black/70 cursor-pointer border border-orange-400/30"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#c2410c] via-orange-600 to-[#9a3412] hover:from-orange-500 hover:to-amber-500 text-white font-display text-base font-bold tracking-wider uppercase transition-all shadow-xl shadow-orange-950/60 cursor-pointer border border-orange-400/40"
               >
-                REQUEST A FREE ESTIMATE
+                <span>REQUEST A FREE ESTIMATE</span>
+                <ArrowRight weight="bold" className="w-5 h-5" />
               </button>
 
               <a
                 href="tel:5022968106"
-                className="px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-display text-base font-bold tracking-wider uppercase transition-all border border-slate-700"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#151922] hover:bg-[#1e2430] text-slate-100 font-display text-base font-bold tracking-wider uppercase transition-all border border-slate-700/80 hover:border-orange-500/40 shadow-lg"
               >
-                CALL 502-296-8106
+                <Phone weight="fill" className="w-4 h-4 text-amber-400" />
+                <span>CALL 502-296-8106</span>
               </a>
             </div>
           </motion.div>

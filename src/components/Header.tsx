@@ -29,21 +29,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0d0f12]/95 backdrop-blur-md shadow-2xl shadow-black/80 border-b border-orange-500/20 py-2.5"
-          : "bg-[#0d0f12]/90 backdrop-blur-sm border-b border-white/5 py-3.5"
+          ? "bg-[#0a0c0f]/95 backdrop-blur-md shadow-2xl shadow-black/90 border-b border-orange-500/25 py-2 sm:py-2.5"
+          : "bg-[#0a0c0f]/90 backdrop-blur-sm border-b border-white/5 py-3 sm:py-3.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Prominent Authentic Logo */}
+        {/* Prominent Authentic FireHorse Logo */}
         <a
           href="#hero"
-          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg group"
+          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl group py-0.5"
         >
-          <FireHorseLogo size="md" />
+          <FireHorseLogo size="lg" />
         </a>
 
         {/* Clean Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
 
           <button
             onClick={onOpenEstimateModal}
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-display text-sm uppercase tracking-wider font-bold text-white bg-gradient-to-r from-[#c2410c] to-[#9a3412] hover:from-orange-600 hover:to-amber-600 transition-all duration-200 shadow-lg shadow-black/60 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer border border-orange-400/30"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-display text-sm uppercase tracking-wider font-bold text-white bg-gradient-to-r from-[#c2410c] via-orange-600 to-[#9a3412] hover:from-orange-500 hover:to-amber-500 transition-all duration-200 shadow-lg shadow-orange-950/60 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer border border-orange-400/40"
           >
             FREE ESTIMATE
           </button>
@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
         <div className="flex items-center gap-3 lg:hidden">
           <a
             href="tel:5022968106"
-            className="inline-flex items-center px-3 py-1.5 rounded-md bg-orange-500/15 border border-orange-500/40 text-orange-400 text-xs font-bold font-display tracking-wider"
+            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-orange-500/15 border border-orange-500/40 text-orange-400 text-xs font-bold font-display tracking-wider"
           >
             502-296-8106
           </a>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden fixed inset-x-0 top-[72px] z-30 bg-[#0d0f12] border-b border-orange-500/30 shadow-2xl overflow-hidden"
+            className="lg:hidden fixed inset-x-0 top-[76px] z-30 bg-[#0a0c0f] border-b border-orange-500/30 shadow-2xl overflow-hidden"
           >
             <div className="px-6 py-6 space-y-4 max-w-lg mx-auto">
               <div className="flex flex-col space-y-2 pb-2">
@@ -127,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEstimateModal }) => {
                     setMobileMenuOpen(false);
                     onOpenEstimateModal();
                   }}
-                  className="w-full py-3 px-4 rounded-lg bg-[#c2410c] hover:bg-orange-600 text-white font-display text-base font-bold tracking-wider uppercase text-center shadow-lg border border-orange-400/40"
+                  className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#c2410c] to-[#9a3412] hover:from-orange-500 hover:to-amber-500 text-white font-display text-base font-bold tracking-wider uppercase text-center shadow-lg border border-orange-400/40"
                 >
                   Request Free Estimate
                 </button>
